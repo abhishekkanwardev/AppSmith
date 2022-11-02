@@ -105,13 +105,26 @@ th {
   background-color: white !important;
 }
 
-
-
 .custom-input-2 {
   outline: none;
   padding: 2px 3px;
   border: 1px solid lightgray;
   font-size: 13px;
+}
+
+#login-btn {
+  background: rgb(248, 106, 43);
+  border: none;
+}
+
+.form-input {
+  border: 1px solid lightgray;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 6px;
+  margin-top: 4px;
 }
 
 .buttons {
