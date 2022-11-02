@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+body {
+  background-color: rgb(246, 246, 246) !important;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+#link {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 30px;
+  padding-bottom: 7px;
+  position: relative;
+}
+#link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0%;
+  position: absolute;
+  background: rgb(7, 160, 33);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#link:hover:after {
+  width: 100%;
+  left: 0;
+}
+.active {
+  color: rgb(7, 160, 33);
+  font-weight: 500;
+}
+
+.page-box {
+  border: 1px solid rgb(199, 198, 198);
+  padding: 1px 2px;
+  font-size: 11px;
+  border-radius: 2px;
+  color: gray;
+  cursor: pointer;
+  background: lightgray !important;
+  margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-box-number {
+  border: 1px solid lightgray;
+  padding: 1px 4px;
+  font-size: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  outline: none;
+}
+
+.page-box-text {
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+/* .page-box:hover {
+  border: 1px solid rgb(7, 160, 33);
+} */
+
+.custom-input {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  width: 110px;
+}
+
+td {
+  font-size: 13px !important;
+  letter-spacing: 0.05rem;
+}
+
+th {
+  font-size: 12px !important;
+  letter-spacing: 0.05rem;
+  font-weight: lighter;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.4rem 0.5rem !important;
+}
+
+.table thead tr th {
+  background-color: rgb(248, 249, 250) !important;
+}
+
+.table tbody tr td {
+  background-color: white !important;
+}
+
+
+
+.custom-input-2 {
+  outline: none;
+  padding: 2px 3px;
+  border: 1px solid lightgray;
+  font-size: 13px;
+}
+
+.buttons {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 1.5px 4px;
+  margin-right: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.buttons:hover {
+  background-color: lightgray;
+}
+
+.buttons .bx {
+  margin-right: 4px;
+}
+
+.col-lg {
+  padding: 0px !important;
+}
+
+.pagination-title {
+  font-size: 13px;
+  margin-right: 8px;
+  font-weight: 500;
+}
