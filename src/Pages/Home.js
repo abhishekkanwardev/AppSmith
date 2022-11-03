@@ -1,5 +1,6 @@
 import m from "mithril";
-import Navbar from "./Navbar";
+import Navbar from "../Components/Navbar";
+import Sidebar from "../Components/Sidebar";
 
 let data = {
   state: "Search",
@@ -26,17 +27,17 @@ const Tabs = {
                 />
               </form>
               <div class="d-flex align-items-center ">
-            <span class="page-box-text"> 0 records </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-left"></i>
-            </span>
-            <span class="page-box-text"> Page </span>
-            <input type="text" value="1" class="page-box-number" />
-            <span class="page-box-text"> of 1 </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-right"></i>
-            </span>
-          </div>
+                <span class="page-box-text"> 0 records </span>
+                <span class="page-box">
+                  <i class="bx fs-5 bx-chevron-left"></i>
+                </span>
+                <span class="page-box-text"> Page </span>
+                <input type="text" value="1" class="page-box-number" />
+                <span class="page-box-text"> of 1 </span>
+                <span class="page-box">
+                  <i class="bx fs-5 bx-chevron-right"></i>
+                </span>
+              </div>
             </div>
             <table class="table border-top ">
               <thead class="bg-light">
@@ -83,17 +84,17 @@ const Tabs = {
                 />
               </form>
               <div class="d-flex align-items-center ">
-            <span class="page-box-text"> 0 records </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-left"></i>
-            </span>
-            <span class="page-box-text"> Page </span>
-            <input type="text" value="1" class="page-box-number" />
-            <span class="page-box-text"> of 1 </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-right"></i>
-            </span>
-          </div>
+                <span class="page-box-text"> 0 records </span>
+                <span class="page-box">
+                  <i class="bx fs-5 bx-chevron-left"></i>
+                </span>
+                <span class="page-box-text"> Page </span>
+                <input type="text" value="1" class="page-box-number" />
+                <span class="page-box-text"> of 1 </span>
+                <span class="page-box">
+                  <i class="bx fs-5 bx-chevron-right"></i>
+                </span>
+              </div>
             </div>
             <table class="table border-top ">
               <thead class="bg-light">
@@ -181,17 +182,17 @@ const Tabs = {
                   </div>
                 </form>
                 <div class="d-flex align-items-center ">
-            <span class="page-box-text"> 0 records </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-left"></i>
-            </span>
-            <span class="page-box-text"> Page </span>
-            <input type="text" value="1" class="page-box-number" />
-            <span class="page-box-text"> of 1 </span>
-            <span class="page-box">
-              <i class="bx fs-5 bx-chevron-right"></i>
-            </span>
-          </div>
+                  <span class="page-box-text"> 0 records </span>
+                  <span class="page-box">
+                    <i class="bx fs-5 bx-chevron-left"></i>
+                  </span>
+                  <span class="page-box-text"> Page </span>
+                  <input type="text" value="1" class="page-box-number" />
+                  <span class="page-box-text"> of 1 </span>
+                  <span class="page-box">
+                    <i class="bx fs-5 bx-chevron-right"></i>
+                  </span>
+                </div>
               </div>
               <table class="table border-top ">
                 <thead class="bg-light">
@@ -287,8 +288,7 @@ const Home = () => {
   return {
     view: () => (
       <>
-        <Navbar />
-        <div class="container-fluid   py-2 px-md-5">
+        <div class="container-fluid py-2 px-md-5">
           <h5 class="text-center  my-3">Oddit Viewer</h5>
 
           <section class=" p-3 bg-white  rounded">

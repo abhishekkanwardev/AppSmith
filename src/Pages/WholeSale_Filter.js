@@ -1,5 +1,5 @@
 import m from "mithril";
-import Navbar from "./Navbar";
+import Navbar from "../Components/Navbar";
 
 const fakeData = {
   data: [
@@ -29,8 +29,7 @@ const fakeData = {
 
 const WholeSale_Filter = {
   view: () => (
-    <>
-      <Navbar />
+    <div class="wrap-inner">
       <div class="container-fluid  py-2 px-md-4">
         <h5 class="text-center my-3">WholeSale Filter</h5>
 
@@ -380,7 +379,7 @@ const WholeSale_Filter = {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   ),
 };
 

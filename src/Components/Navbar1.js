@@ -1,7 +1,7 @@
 import m from "mithril";
 
 const links = [
-  { title: "Oddit Viewer", path: "/" },
+  { title: "Oddit Viewer", path: "/dashboard" },
   { title: "WholeSale Filter", path: "/WholeSale_Filter" },
 ];
 let data = {
@@ -10,7 +10,7 @@ let data = {
   },
 };
 
-const Navbar = {
+const Navbar1= {
   view: () => (
     <div
       style={{ backgroundColor: "white", zIndex: "10" }}
@@ -43,4 +43,4 @@ const Navbar = {
   ),
 };
 
-export default Navbar;
+export default Navbar1;
