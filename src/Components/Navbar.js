@@ -9,7 +9,7 @@ const Navbar = () => {
           <nav class="navbar container-fluid px-3 d-flex justify-content-between  navbar-expand-lg">
             <div class="fs-5 gap-1 d-flex align-items-center ">
               {" "}
-              <i class="bx bxs-hot fs-4"></i> WholeCell
+              <i class="bx bxs-hot fs-4"></i>
             </div>
             <div class="d-flex gap-md-4 gap-2">
               {/* Searchbar */}
@@ -34,15 +34,31 @@ const Navbar = () => {
 
               {/* Profile */}
               <div class="position-relative">
-              <div class="d-flex align-items-center cursor-pointer">
-                shane@metint.com<i class="bx bx-chevron-down fs-5"></i>
-              </div>
-              <div class="position-">
-                Hello
-              </div>
-              </div>
+                <div class="dropdown">
+                  <a
+                    class="dropdown-toggle d-flex align-items-center cursor-pointer navbar-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    shane@metint.com
+                  </a>
 
-              
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <span
+                      class="text-danger d-flex px-3 text-align-center cursor-pointer"
+                      onclick={() => {
+                        localStorage.removeItem("token");
+                        m.route.set("/");
+                      }}
+                    >
+                      Log out
+                    </span>
+                  </ul>
+                </div>
+              </div>
             </div>
           </nav>
         </div>

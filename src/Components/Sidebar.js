@@ -1,4 +1,51 @@
 const Sidebar = () => {
+  const navItems = [
+    {
+      name: "Purchase Orders",
+      icon: " bx-package ",
+      path: "",
+    },
+    {
+      name: "Inventory",
+      icon: " bx-barcode ",
+      path: "",
+    },
+    {
+      name: "Process batches",
+      icon: " bx-list-ul ",
+      path: "",
+    },
+    {
+      name: "Inventory Report",
+      icon: " bxs-report ",
+      path: "",
+    },
+    {
+      name: "Sales",
+      icon: " bxs-cart ",
+      path: "",
+    },
+    {
+      name: "Setting",
+      icon: " bxs-cog ",
+      path: "",
+    },
+    {
+      name: "Product Catalog",
+      icon: " bxs-book-alt ",
+      path: "",
+    },
+    {
+      name: "Integrations",
+      icon: " bx-refresh ",
+      path: "",
+    },
+    {
+      name: "Scan report",
+      icon: " bx-scan ",
+      path: "",
+    },
+  ];
   return {
     view: () => {
       return (
@@ -16,48 +63,16 @@ const Sidebar = () => {
           >
             <div className="">
               <ul className="side_menu_list p-0 mt-3">
-                <li className="sm_menu active">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Inventory</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Process</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Inventory Report</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Sales</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Setting</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Product</span>
-                  </a>
-                </li>
-                <li className="sm_menu">
-                  <a href="#">
-                    <i class="bx bxs-dashboard fs-5"></i>
-                    <span class="side-menu-text">Report</span>
-                  </a>
-                </li>
+                {navItems.map((items, index) => {
+                  return (
+                    <li key={index} className="sm_menu">
+                      <a href="#">
+                        <i class={`bx ${items.icon} fs-4`}></i>
+                        <span class="side-menu-text">{items.name}</span>
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
