@@ -10,7 +10,7 @@ let data = {
   },
 };
 
-const Navbar1= {
+const Navbar1 = {
   view: () => (
     <div
       style={{ backgroundColor: "white", zIndex: "10" }}

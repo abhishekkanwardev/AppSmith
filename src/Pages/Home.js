@@ -288,7 +288,8 @@ const Home = () => {
   return {
     view: () => (
       <>
-        <div class="container-fluid py-2 px-md-5">
+       
+        <div class="container-fluid py-2">
           <h5 class="text-center  my-3">Oddit Viewer</h5>
 
           <section class=" p-3 bg-white  rounded">
@@ -311,6 +312,7 @@ const Home = () => {
             <Tabs />
           </section>
         </div>
+     
       </>
     ),
   };

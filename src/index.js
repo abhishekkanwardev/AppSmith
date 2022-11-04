@@ -13,7 +13,12 @@ const Layout = {
         <div id="add-class" className="wrap ">
           <div className="main-wrap">
             <Sidebar />
-            {v.children}
+            <div class="wrap-inner">
+              <div class="wrap-inner-content">
+                {localStorage.getItem("token") ? v.children : m.route.set("/")}
+              </div>
+            </div>
+            {/* {v.children} */}
           </div>
         </div>
       </div>

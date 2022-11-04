@@ -24,12 +24,11 @@ const fakeData = {
       count: 1,
     },
   ],
- 
 };
 
 const WholeSale_Filter = {
   view: () => (
-    <div class="wrap-inner">
+    <>
       <div class="container-fluid  py-2 px-md-4">
         <h5 class="text-center my-3">WholeSale Filter</h5>
 
@@ -379,7 +378,7 @@ const WholeSale_Filter = {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   ),
 };
 
