@@ -1,12 +1,41 @@
 import m from "mithril";
+import axios from "axios";
+
 const Login = () => {
-  let formData = {
-    email: "",
+  let formValues = {
+    username: "",
     password: "",
   };
 
   let handleInput = (e) => {
-    formData = { ...formData, [e.target.name]: e.target.value };
+    formValues = { ...formValues, [e.target.name]: e.target.value };
+  };
+
+  // let handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   let url = "http://127.0.0.1:8000/auth/token/";
+  //   m.request({
+  //     method: "POST",
+  //     url: url,
+  //     body: formValues,
+  //   }).then(function (result) {
+  //     console.log(result);
+  //   });
+  // };
+
+  let handleSubmit = async (event) => {
+    event.preventDefault();
+    let url = "http://127.0.0.1:8000/auth/token/";
+    const payload = new FormData();
+    payload.append("username", formValues.username);
+    payload.append("password", formValues.password);
+    try {
+      let response = await axios.post(url, payload);
+      localStorage.setItem("token", response.data.access_token);
+      m.route.set("/dashboard");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return {
@@ -28,17 +57,17 @@ const Login = () => {
                       Sign up
                     </span>
                   </div>
-
-                  <div class="my-4">
-                    {/* Email */}
+                  <form onsubmit={handleSubmit} class="my-4">
+                    {/* username */}
                     <div>
-                      <label class="">Email</label>
+                      <label class="">Username</label>
                       <input
-                        name="email"
-                        type="email"
+                        name="username"
+                        type="text"
+                        required
                         class="form-input fs-6"
-                        placeholder="abc@gmail.com"
-                        value={formData.email}
+                        placeholder="username"
+                        value={formValues.username}
                         oninput={(e) => {
                           handleInput(e);
                         }}
@@ -51,9 +80,10 @@ const Login = () => {
                       <input
                         name="password"
                         type="password"
+                        required
                         class="form-input fs-6"
                         placeholder="password"
-                        value={formData.password}
+                        value={formValues.password}
                         oninput={(e) => {
                           handleInput(e);
                         }}
@@ -61,18 +91,19 @@ const Login = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button
+                    <input
+                      type="submit"
                       id="login-btn"
-                      onclick={() => {
-                        console.log(formData);
-                        m.route.set("/dashboard");
-                      }}
+                      // onclick={() => {
+                      //   console.log(formValues);
+                      //   m.route.set("/dashboard");
+                      // }}
+                      value="Sign in"
                       class="w-100 py-2 my-1 fs-6 text-white border-none text-center"
-                    >
-                      Sign in
-                    </button>
+                    />
+
                     <div class="text-center my-2">Forgot Password</div>
-                  </div>
+                  </form>
                 </div>
                 <div class="d-flex m-4  justify-content-between align-items-center">
                   <span>Privacy Policy</span>
