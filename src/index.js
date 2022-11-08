@@ -1,10 +1,14 @@
 import m from "mithril";
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
-import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import WholeSale_Filter from "./Pages/WholeSale_Filter";
+import Sample from "./Pages/Sample";
+import Dashboard from "./Pages/Dashboard";
+
+import $ from "jquery"
+
 const Layout = {
   view: (v) => {
     return (
@@ -14,28 +18,26 @@ const Layout = {
           <div className="main-wrap">
             <Sidebar />
             <div class="wrap-inner">
-              <div class="wrap-inner-content">
+              <div class="wrap-inner-content p-2">
                 {localStorage.getItem("token") ? v.children : m.route.set("/")}
               </div>
             </div>
-            {/* {v.children} */}
           </div>
         </div>
       </div>
     );
   },
-  // m(
-  //   "div",
-  //   m(Navbar),
-  //   m("div.main", [m(Sidebar), v.children]),
-  //   m(".footer", "FOOTER")
-  // ),
 };
 
+$(document).ready(function() {
+  $('#example').DataTable();
+} );
+
+// Routes
 m.route(document.body, "/", {
   "/": Login,
   "/signup": Signup,
-  "/wholesale": {
+  "/wholecell": {
     render: () => (
       <Layout>
         <WholeSale_Filter />
@@ -45,7 +47,14 @@ m.route(document.body, "/", {
   "/dashboard": {
     render: () => (
       <Layout>
-        <Home />
+        <Dashboard />
+      </Layout>
+    ),
+  },
+  "/sample": {
+    render: () => (
+      <Layout>
+        <Sample />
       </Layout>
     ),
   },

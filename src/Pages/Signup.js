@@ -16,7 +16,7 @@ const Signup = () => {
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-md-8 col-lg-5">
-                <div class="h-100 ">
+                
                   <h3 class="text-center w-100 my-4">App Smith</h3>
                   <div class="bg-white shadow-lg rounded mx-auto p-md-5 p-4">
                     <h4 class="text-center">Create your free account</h4>
@@ -77,7 +77,7 @@ const Signup = () => {
                     <span class="cursor-pointer">Privacy Policy</span>
                     <span class="cursor-pointer">Terms and conditions </span>
                   </div>
-                </div>
+               
               </div>
             </div>
           </div>

@@ -9,7 +9,8 @@ const Navbar = () => {
           <nav class="navbar container-fluid px-3 d-flex justify-content-between  navbar-expand-lg">
             <div class="fs-5 gap-1 d-flex align-items-center ">
               {" "}
-              <i class="bx bxs-hot fs-4"></i>
+              {/* <i class="bx bxs-hot fs-4"></i> */}
+              MET DERP
             </div>
             <div class="d-flex gap-md-4 gap-2">
               {/* Searchbar */}

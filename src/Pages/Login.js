@@ -11,18 +11,6 @@ const Login = () => {
     formValues = { ...formValues, [e.target.name]: e.target.value };
   };
 
-  // let handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   let url = "http://127.0.0.1:8000/auth/token/";
-  //   m.request({
-  //     method: "POST",
-  //     url: url,
-  //     body: formValues,
-  //   }).then(function (result) {
-  //     console.log(result);
-  //   });
-  // };
-
   let handleSubmit = async (event) => {
     event.preventDefault();
     let url = "http://127.0.0.1:8000/auth/token/";
