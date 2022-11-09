@@ -7,8 +7,6 @@ import WholeSale_Filter from "./Pages/WholeSale_Filter";
 import Sample from "./Pages/Sample";
 import Dashboard from "./Pages/Dashboard";
 
-import $ from "jquery"
-
 const Layout = {
   view: (v) => {
     return (
@@ -28,10 +26,6 @@ const Layout = {
     );
   },
 };
-
-$(document).ready(function() {
-  $('#example').DataTable();
-} );
 
 // Routes
 m.route(document.body, "/", {

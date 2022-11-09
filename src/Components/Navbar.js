@@ -3,7 +3,7 @@ const Navbar = () => {
     view: () => {
       return (
         <div
-          style={{ background: "rgb(39,147,239)", color: "white" }}
+          style={{ background: "rgb(39,147,239) ", color: "white", zIndex:"10" }}
           class="position-sticky text-white top-0 start-0"
         >
           <nav class="navbar container-fluid px-3 d-flex justify-content-between  navbar-expand-lg">
