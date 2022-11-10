@@ -288,3 +288,9 @@ th {
 #hover-popup:hover ~ #hover-popup-box {
   display: block;
 }
+.responsive-table {
+  overflow: auto;
+}
+.dataTables_wrapper .dataTables_paginate {
+  white-space: nowrap;
+}

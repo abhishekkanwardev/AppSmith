@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import WholeSale_Filter from "./Pages/WholeSale_Filter";
+import WholeCell_Filter from "./Pages/WholeCell_Filter";
 import Sample from "./Pages/Sample";
 import Dashboard from "./Pages/Dashboard";
 
@@ -34,7 +34,7 @@ m.route(document.body, "/", {
   "/wholecell": {
     render: () => (
       <Layout>
-        <WholeSale_Filter />
+        <WholeCell_Filter />
       </Layout>
     ),
   },
